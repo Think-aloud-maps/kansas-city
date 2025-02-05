@@ -212,8 +212,8 @@
             { title: "Current Time", info: "4:10 PM." },
             { title: "Address of Origin", info: "4529 Francis St, Kansas City, KS 66103." },
             { title: "Address of Destination", info: "1001 Bedford Ave, North Kansas City, MO 64116." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "8.59 miles." },
+            { title: "Estimated Time to Destination", info: "15 minutes." },
             { title: "State of Charge of Battery", info: "15% charge." },
             { title: "Range of Current Battery", info: "45 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "34 miles." },
@@ -231,10 +231,10 @@
                 name: 'Woodside Apartments',
 
                 location: '2200 W 47th Pl @ Woodside Apartments, Westwood 66205',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '0.21',
+                originTime: '1',
+                destDistance: '8.65',
+                destTime: '16',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -256,7 +256,7 @@
                 parkingFee: 'Unknown',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.01 miles away.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.1 miles away.',
                 grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.5 miles away.',
                 sportsClothes: 'Yes. <br><br> There is a sports or clothing store in walking distance 0.05 miles away.',
                 
@@ -270,10 +270,10 @@
                 name: 'The Roasterie',
 
                 location: '1204 W 27th St @ The Roasterie, Kansas City 64108',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '2.92',
+                originTime: '7',
+                destDistance: '5.26',
+                destTime: '10',
 
                 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
